@@ -31,7 +31,7 @@ SELECT
     custid,
     fname,
     CASE
-        WHEN mname IS NULL THEN LTNAME
+        WHEN mname IS NULL THEN ltname
         ELSE mname
     END AS Cust_Name
 FROM CUSTOMER;
