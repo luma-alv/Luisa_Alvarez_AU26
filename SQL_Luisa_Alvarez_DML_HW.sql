@@ -28,6 +28,7 @@ ORDER BY
 -- =====================================================
 
 SELECT
+    custid,
     fname,
     CASE
         WHEN mname IS NULL THEN LTNAME
@@ -80,6 +81,11 @@ WHERE EXTRACT (DAY FROM ac.aod) > 15;
 -- CATEGORY 1: SIMPLE QUESTIONS
 -- PROBLEM 6: Display Female Customers and Their Accounts
 -- INNER JOIN returns only customers who have at least one associated account.
+-- The CUSTOMER table does not contain a SEX or GENDER column.
+-- Therefore, female customers cannot be directly identified using the available schema.
+-- The OCCUPATION column is used as an alternative criterion to exclude
+-- Business, Service, and Student occupations, as specified in the exercise.
+-- This approach does not guarantee that all selected customers are female.
 -- =====================================================
 
 SELECT 
